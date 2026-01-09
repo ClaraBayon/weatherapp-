@@ -48,6 +48,7 @@ button {
 
 .container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.8rem;
   
@@ -213,4 +214,5 @@ display: inline-block
 
 .pronostico__img{
 width: 40px;
+
 }
