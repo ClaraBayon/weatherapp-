@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 60 API</title>
+    <link rel="stylesheet" href="./styles/bulma.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+     <meta name="MobileOptimized" content="width" />
+    <meta name="HanheldFriendly" content="true" />
+
+    <!-- Meta etiquetas PWA para Apple -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-startup-image" href="./assets/favicons/favicon_512x512@1x.png" />
+
+    <!-- Configuración General PWA -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="./assets/favicons/favicon_16x16@1x.png">
+    <link rel="apple-touch-icon" href="./assets/favicons/favicon_32x32@1x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/favicon_152x152@1x.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicons/favicon_512x512@1x.png">
+</head>
+<body>
+    <header>
+       
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+   Weather APP
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Inicio
+      </a>
+
+      <a class="navbar-item" onclick="obtenerDatos(42.59, -8.81)" href="">
+        Vilagarcía de Arousa
+      </a>
+  <a class="navbar-item" href="buscar.html">
+          Buscar
+        </a>
+
+    </div>
+
+  </div>
+</nav>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="columns__icon">
+            <img id="iconWeather" class="tiempo__icono" src="./assets/iconos/01d.png" alt="Icono do tempo">
+                <h2 id="weatherToday" class="tempo__descricion">
+                    Soleado</h2>
+                <p id="temperatureToday" class="tempo__temperatura"></p>
+                <p id="location">Vilagarcía</p>
+        </div>
+        </div>
+        
+        <div class="date is-flex is-justify-content-center">
+          <p id="data" class="data__p my-5"></p>
+        </div>
+
+<!-- Pronóstico do tempo -->
+        <section id="forecastContainer" class="pronostico">
+          <div class="pronostico__container">
+          <template id="forecastTemplate">
+            <div class="pronostico__card">
+              <h4 id="date" class="forecast__hora"></h4>
+              <div class="div__img">
+              <img class="pronostico__img" id="weatherIcon" src="" alt="">
+              </div>
+              <p id="temperature" class="forecast__temperatura"></p>
+            </div>
+          </template>
+          </div>
+        </section>
+        <div class="container">
+            <div class="columns">
+               
+           </div>
+            <div class="caja__datos">
+                <p class="datos__p">Temp. máx:</p>
+                <img src="./assets/iconos/fiebre.png" alt="Icono temperatura máxima">
+                <p id="tempMax"></p>
+            </div>
+            <div class="caja__datos">
+                <p class="datos__p">Temp. mín:</p>
+                <img src="./assets/iconos/baja-temperatura.png" alt="Icono temperatura mínima">
+                <p id="tempMin"></p>
+            </div>
+            <div class="caja__datos">
+                <p class="datos__p">Humedad:</p>
+                <img src="./assets/iconos/humedad.png" alt="Icono de humedad">
+                <p id="humidity"></p>
+            </div>
+            <div class="caja__datos">
+                <p class="datos__p">Sensación térmica:</p>
+                <img src="./assets/iconos/termico.png" alt="Icono sensación térmica">
+                <p id="feelsLike"></p>
+            </div>
+            <div class="caja__datos">
+                <p class="datos__p">Presión</p>
+                <img class="pressure" src="./assets/iconos/calibre.png" alt="Icono de Presión">
+                <p id="pressure"></p>
+            </div>
+          
+        </div> 
+
+
+              <div class="caja amanecer">
+              <p id="Amanecer"></p>
+              <img class="sol" src="./assets/iconos/amanecer.png" alt="Icono de sol">
+            </div>
+        <div class="caja solpor">
+              <p id="solpor"></p>
+              <img class="luna" src="./assets/iconos/luna-llena.png" alt="Icono de una luna llena">
+            </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
